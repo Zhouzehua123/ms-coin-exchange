@@ -1,6 +1,9 @@
 Name: register.rpc
-ListenOn: 127.0.0.1:8081
+
+# 建议改成 0.0.0.0，方便以后其他服务也能访问你这台机器上的 ucenter
+ListenOn: 0.0.0.0:8081  
+
 Etcd:
   Hosts:
-  - 127.0.0.1:2379
+    - 100.89.157.35:2379   # ← 这里换成你寝室的 Tailscale IP
   Key: register.rpc
